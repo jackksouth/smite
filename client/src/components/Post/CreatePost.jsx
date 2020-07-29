@@ -3,8 +3,7 @@ import './CreatePost.scss'
 
 export default class CreatePost extends Component {
   state = {
-    captions: '',
-    image_url: ''
+    post: []
   }
 
   handleChange = (e) => {

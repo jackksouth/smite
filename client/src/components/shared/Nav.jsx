@@ -12,21 +12,21 @@ export default function Nav(props) {
   return (
     <div className="icon">
       <Link className="HomeIcon" to="/">
-        <home />
+        <Home />
       </Link>
       {props.currentUser && (
         <Link to={`/users/${props.currentUser.id}`} className="Usericon">
-          <profile />
+          <Profile />
         </Link>
       )}
-      <Link to="/CreatePost" className="Createicon">
-        <createpost />
+      <Link to="/Createost" className="Createicon">
+        <CreatePost />
       </Link>
       <Link to="/Login" className="Login">
-        <login />
+        <Login />
       </Link>
       <Link to="/Register" className="Registericon">
-        <register />
+        <Register />
       </Link>
     </div>
   );

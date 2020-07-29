@@ -74,11 +74,7 @@ export default class Homepage extends Component {
                   <img src={post.user.image_url} className="usericon" />
                   <p className="usernameicon" >{post.user.username} </p>
                 </div>
-                <img className="post_image" src={post.image_url} alt='post_image' />
-                <div className="captioninfo">
-                  <p className="captionName" >{post.user.username} </p>
-                  <p className="captions">{post.captions}</p>
-                </div>
+                <img className="post" src={post.text} alt='post_text' />
               </div>
 
               <div>
