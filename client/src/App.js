@@ -58,7 +58,6 @@ class App extends Component {
   };
 
   handleCreatePost = async (postData) => {
-    console.log("skateboard");
     const newPost = await createPost(postData);
     this.setState((prevState) => ({
       posts: [...prevState.posts, newPost],

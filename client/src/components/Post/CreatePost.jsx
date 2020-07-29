@@ -21,22 +21,12 @@ export default class CreatePost extends Component {
         e.preventDefault();
         handleCreatePost(this.state);
       }}>
-        <h3>Create A Post</h3>
+        <h3>Create a Smite Post</h3>
         <label>
           <input
-            name="captions"
-            className="input-caption"
-            placeholder='Caption'
-            type='text'
-            value={this.state.caption}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          <input
-            name='image_url'
-            className="input-image-link"
-            placeholder='Image Link'
+            name='post-text'
+            className="input-post-text"
+            placeholder='Smite Post'
             type='text'
             value={this.state.image_url}
             onChange={this.handleChange}
