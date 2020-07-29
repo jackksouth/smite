@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getAllPosts, createComment, deletePost, putComment, deleteComment } from '../../services/api-helper'
+import { getAllPosts, createComment, deletePost, putComment, putPost, deleteComment } from '../../services/api-helper'
 import CreateComment from '../Comment/CreateComment';
 import CommentEdit from '../Comment/CommentEdit';
 import './Homepage.scss';

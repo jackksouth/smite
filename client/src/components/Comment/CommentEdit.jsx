@@ -69,7 +69,7 @@ export default class CommentEdit extends Component {
                   <button onClick={() => { this.toggleEdit() }}>Edit</button>
                   <button
                     onClick={() => {
-                      this.toggleOptions;
+                      this.toggleOptions();
                       this.props.handleCommentDelete(comment.id);
                     }}
                   >

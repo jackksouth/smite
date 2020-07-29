@@ -6,7 +6,7 @@ width: 100%;
 }
 
 .Posts {
-  width: 600px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,8 +23,8 @@ background-color: white;
 }
 
 .usericon {
-  height: 40px;
-  width: 40px;
+  height: 10px;
+  width: 10px;
   border: black 2px solid;
   border-radius: 100%;
   margin: 5px;
@@ -35,11 +35,6 @@ background-color: white;
   padding: 15px 10px 10px 10px;
 }
 
-.post_image {
-  max-width: 600px;
-  max-height: 600px;
-  object-fit: contain;
-}
 
 .CompletePostIncludeComment {
   display: flex;

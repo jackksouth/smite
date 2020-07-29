@@ -1,3 +1,42 @@
+
 .header {
+  background-color: #fff;
+}
+
+.HomeIcon {
+  width: 10px;
+  height: auto;
+}
+
+.Usericon {
+  width: 10px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.Createicon {
+  width: 10px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.Login {
+  width: 10px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.Registericon {
+  width: 10px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
   background-color: white;
 }

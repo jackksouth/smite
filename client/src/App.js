@@ -5,6 +5,7 @@ import { loginUser, registerUser, removeToken, verifyUser } from "./services/aut
 import { getAllPosts, createPost } from "./services/api-helper";
 import { withRouter, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
+import Nav from './components/shared/Nav.jsx';
 import UserProfile from "./components/Profile/UserProfile";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
@@ -99,12 +100,13 @@ class App extends Component {
         <div>
           <Link to="/">
             <Header />
+            <Nav />
           </Link>
 
           {this.state.posts && (
             <Route
               exact
-              path="/"
+              path="/Nav"
               render={(props) => (
                 <Homepage
                   posts={this.state.posts}
@@ -143,6 +145,13 @@ class App extends Component {
             path="/Register"
             render={(props) => (
               <Register handleRegister={this.handleRegister} {...props} />
+            )}
+          />
+          <Route
+            exact
+            path="/Nav"
+            render={(props) => (
+              <Nav handleNav={this.handle} {...props} />
             )}
           />
           <Route

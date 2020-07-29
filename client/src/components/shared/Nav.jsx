@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Home } from "../assets/home.png";
-import { ReactComponent as Profile } from "../assets/profile.png";
-import { ReactComponent as CreatePost } from "../assets/createpost.png";
-import { ReactComponent as Register } from "../assets/register.png";
-import { ReactComponent as Login } from "../assets/login.png";
+import home from './assets/home.png';
+import profile from './assets/profile.png';
+import createpost from './assets/createpost.png';
+import login from './assets/login.png';
+import register from './assets/register.png';
 import "./Nav.scss";
 
 export default function Nav(props) {
@@ -12,23 +12,22 @@ export default function Nav(props) {
   return (
     <div className="icon">
       <Link className="HomeIcon" to="/">
-        <Home />
+        <img src={home} />
       </Link>
       {props.currentUser && (
         <Link to={`/users/${props.currentUser.id}`} className="Usericon">
-          <Profile />
+          <img src={profile} />
         </Link>
       )}
-      <Link to="/Createost" className="Createicon">
-        <CreatePost />
+      <Link to="/CreatePost" className="Createicon">
+        <img src={createpost} />
       </Link>
       <Link to="/Login" className="Login">
-        <Login />
+        <img src={login} />
       </Link>
       <Link to="/Register" className="Registericon">
-        <Register />
+        <img src={register} />
       </Link>
     </div>
   );
 }
-
