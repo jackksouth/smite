@@ -2,41 +2,32 @@
   background-color: #fff;
 }
 
-.HomeIcon {
+.Homeicon {
   width: 10px;
   height: auto;
-  justify-content: space-between;
 }
 
 .Usericon {
-  width: 40px;
+  width: 10px;
   height: auto;
-  justify-content: space-between;
 }
 
 .Createicon {
-  width: 40px;
+  width: 10px;
   height: auto;
-  justify-content: space-between;
 }
 
 .Login {
-  width: 40px;
+  width: 10px;
   height: auto;
-  justify-content: space-between;
 }
 
 .Registericon {
-  width: 40px;
+  width: 10px;
   height: auto;
-  justify-content: space-between;
 }
 
 .icon {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
   background-color: white;
 }

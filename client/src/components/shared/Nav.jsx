@@ -11,22 +11,22 @@ export default function Nav(props) {
 
   return (
     <div className="icon">
-      <Link className="HomeIcon" to="/">
-        <img src={home} />
+      <Link to="/Homepage">
+        <img src={home} className="Homeicon" />
       </Link>
       {props.currentUser && (
-        <Link to={`/users/${props.currentUser.id}`} className="Usericon">
-          <img src={profile} />
+        <Link to={`/users/${props.currentUser.id}`}>
+          <img src={profile} className="Usericon" />
         </Link>
       )}
-      <Link to="/CreatePost" className="Createicon">
-        <img src={createpost} />
+      <Link to="/CreatePost">
+        <img src={createpost} className="Createicon" />
       </Link>
       <Link to="/Login" className="Login">
-        <img src={login} />
+        <img src={login} className="Login" />
       </Link>
-      <Link to="/Register" className="Registericon">
-        <img src={register} />
+      <Link to="/Register">
+        <img src={register} className="Registericon" />
       </Link>
     </div>
   );
