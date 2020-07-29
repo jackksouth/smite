@@ -3,31 +3,43 @@
 }
 
 .Homeicon {
-  width: 10px;
+  width: 75px;
   height: auto;
+  display: inline-block;
+  margin-left: 50px;
 }
 
 .Usericon {
-  width: 10px;
+  width: 75px;
   height: auto;
+  display: inline-block;
 }
 
 .Createicon {
-  width: 10px;
+  width: 75px;
   height: auto;
+  display: inline-block;
+  margin-left: 50px;
 }
 
 .Login {
-  width: 10px;
+  width: 75px;
   height: auto;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 .Registericon {
-  width: 10px;
+  width: 75px;
   height: auto;
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .icon {
   justify-content: center;
-  background-color: white;
+  background-color:rgb(48, 60, 77);
+  display: inline-block;
+  margin-left: auto;
 }

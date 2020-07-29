@@ -1,98 +1,112 @@
 body {
-display: flex;
 text-align: center;
 flex-direction: column;
 width: 100%;
+padding-bottom: 500px;
 }
 
-.Posts {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: start;
-  border: lightgray 1px solid;
-  margin: 0 auto;
+.header {
+  border: 0px solid #000;
+  margin-bottom: 200px;
 }
 
-.Userinfo {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-background-color: white;
-}
-
-.usericon {
-  height: 10px;
-  width: 10px;
-  border: black 2px solid;
-  border-radius: 100%;
-  margin: 5px;
-}
-
-.usernameicon {
-  font-size: medium;
-  padding: 15px 10px 10px 10px;
+.header img {
+  height: 150px;
+  width: 175px;
+  margin: auto;
+  position: center;
+  left: 40px;
 }
 
 
-.CompletePostIncludeComment {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: lightgray 1px solid;
-  background-color: white;
-  margin: 5px;
-  top: 0.10;
-  left: auto;
-}
+// .Posts {
+//   width: 200px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   flex: start;
+//   border: lightgray 1px solid;
+//   margin: 0 auto;
+// }
 
-.captionName {
-  font-weight: bold;
-  padding: 5px;
-}
+// .Userinfo {
+//   height: 50px;
+//   display: flex;
+//   flex-direction: row;
+// background-color: white;
+// }
 
-.captioninfo {
-align-self: start;
-flex-direction: row;
-display: flex;
-padding: 4px;
-}
+// .usericon {
+//   height: 10px;
+//   width: 10px;
+//   border: black 2px solid;
+//   border-radius: 100%;
+//   margin: 5px;
+// }
 
-.captions {
-  padding: 5px;
-}
-
-.update-deletebuttons {
-  display: flex;
-  flex-direction: row;
-}
-
-.UpdateButton {
-  width: 7vw;
-  font-size: 15px;
-  letter-spacing: 0.1px;
-  padding: 15px 5px 15px 5px;
-  background-color: white;
-  color: lightblue;
-  opacity: 0.75;
-  border: 0px;
-}
-
-.DeleteButton {
-  width: 7vw;
-  font-size: 15px;
-  letter-spacing: 0.1px;
-  padding: 15px 5px 15px 5px;
-  background-color: white;
-  color: lightblue;
-  opacity: 0.75;
-  border: 0px;
-}
+// .usernameicon {
+//   font-size: medium;
+//   padding: 15px 10px 10px 10px;
+// }
 
 
-  @media (max-width: 870px){
-    .Posts {
-        width: 100%;
-    }
-  }
+// .CompletePostIncludeComment {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   border: lightgray 1px solid;
+//   background-color: white;
+//   margin: 5px;
+//   top: 0.10;
+//   left: auto;
+// }
+
+// .captionName {
+//   font-weight: bold;
+//   padding: 5px;
+// }
+
+// .captioninfo {
+// align-self: start;
+// flex-direction: row;
+// display: flex;
+// padding: 4px;
+// }
+
+// .captions {
+//   padding: 5px;
+// }
+
+// .update-deletebuttons {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .UpdateButton {
+//   width: 7vw;
+//   font-size: 15px;
+//   letter-spacing: 0.1px;
+//   padding: 15px 5px 15px 5px;
+//   background-color: white;
+//   color: lightblue;
+//   opacity: 0.75;
+//   border: 0px;
+// }
+
+// .DeleteButton {
+//   width: 7vw;
+//   font-size: 15px;
+//   letter-spacing: 0.1px;
+//   padding: 15px 5px 15px 5px;
+//   background-color: white;
+//   color: lightblue;
+//   opacity: 0.75;
+//   border: 0px;
+// }
+
+
+//   @media (max-width: 870px){
+//     .Posts {
+//         width: 100%;
+//     }
+//   }
