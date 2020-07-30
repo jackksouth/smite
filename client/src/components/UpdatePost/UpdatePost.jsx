@@ -30,7 +30,7 @@ export default class UpdatePost extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => ({
-      ...prevState.posts,[name]: value
+      ...prevState.posts, [name]: value
     }));
   }
 
@@ -49,7 +49,7 @@ export default class UpdatePost extends Component {
   }
 
   render() {
-    const { handlePostUpdate, history, match } = this.props;
+    const { history } = this.props;
     const { id } = this.props.match.params
     return (
       <form onSubmit={(e) => {

@@ -29,7 +29,7 @@ export default class UserProfile extends Component {
               <div className="moreProfile">
                 <div className="profile-info">
 
-                  <img src={this.state.user.image_url} className="profile-image" />
+                  <img src={this.state.user.image_url} alt="" className="profile-image" />
                   <h1 className="profile-user-name ">{this.state.user.username}</h1>
                   <p className="profile-bio">{this.state.user.bio} </p>
                 </div>
@@ -41,7 +41,7 @@ export default class UserProfile extends Component {
           {this.state.user.posts && this.state.user.posts.map(posts =>
             <>
               <div className="gallery">
-                <img className="gallery-image" src={posts.image_url} />
+                <img className="gallery-image" alt="" src={posts.image_url} />
                 <p className="gallery-item-info">{posts.captions}</p>
               </div>
             </>

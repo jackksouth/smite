@@ -23,7 +23,7 @@ export default class Register extends Component {
       <div id="wrapper">
         <div className="main-content">
           <div className="header">
-            <img src={logo} />
+            <img src={logo} alt="" />
           </div>
           <form onSubmit={(e) => {
             e.preventDefault();

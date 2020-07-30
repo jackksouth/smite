@@ -3,7 +3,7 @@ import Header from "./components/shared/Header";
 import "./App.css";
 import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth";
 import { getAllPosts, createPost } from "./services/api-helper";
-import { withRouter, Route, Link } from "react-router-dom";
+import { withRouter, Route } from "react-router-dom";
 import Homepage from "./components/Homepage/Homepage";
 import Nav from './components/shared/Nav.jsx';
 import UserProfile from "./components/Profile/UserProfile";
@@ -80,12 +80,12 @@ class App extends Component {
 
   addNewComment = (newComment, id) => {
     const updatedPost = this.state.posts.find(
-      (post) => post.id == newComment.post_id
+      (post) => post.id === newComment.post_id
     );
     updatedPost.comments.push(newComment);
     this.setState((prevState) => ({
       posts: prevState.posts.map((post) =>
-        post.id == id ? updatedPost : post
+        post.id === id ? updatedPost : post
       ),
     }));
   };
@@ -100,7 +100,7 @@ class App extends Component {
         <div>
 
           <Header />
-          <Nav currentUser={this.state.currentUser}/>
+          <Nav currentUser={this.state.currentUser} />
 
 
           {this.state.posts && (

@@ -35,7 +35,7 @@ export default class PostDetails extends Component {
             <div className="CompletePostIncludeComment">
               <button onClick={this.props.clearVisablePost}>X</button>
               <div className="Posts">
-                <img src={this.state.post.post_text} className="post_text" />
+                <img src={this.state.post.post_text} alt="" className="post_text" />
                 <p className="captions">{this.state.post.captions}</p>
               </div>
             </div>
