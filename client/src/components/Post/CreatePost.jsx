@@ -27,7 +27,7 @@ export default class CreatePost extends Component {
             className="input-post-text"
             placeholder='Smite Post'
             type='text'
-            value={this.state.image_url}
+            value={this.state.text}
             onChange={this.handleChange}
           />
         </label>

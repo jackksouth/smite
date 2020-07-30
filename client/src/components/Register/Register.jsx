@@ -21,8 +21,8 @@ export default class Register extends Component {
 
     return (
       <div id="wrapper">
-        <div class="main-content">
-          <div class="header">
+        <div className="main-content">
+          <div className="header">
             <img src={logo} />
           </div>
           <form onSubmit={(e) => {
@@ -30,7 +30,7 @@ export default class Register extends Component {
             handleRegister(this.state);
             history.push('/');
           }}>
-            <div class="l-part">
+            <div className="l-part">
               <h3>Register</h3>
               <label>
                 <input

@@ -11,6 +11,6 @@ Comment.destroy_all
 
 @admin = User.create!(username: 'jackksouth', email: 'admin@gmail.com', password:'123456', image_url:'')
 
-post = Post.create(image_url:'', captions: '', user_id: @admin.id)
+post = Post.create(post_text:'smite post', captions: 'post', user_id: @admin.id)
 
 Comment.create(post_id: post.id, user_id: @admin.id, content: '')

@@ -7,7 +7,7 @@ export default class PostDetails extends Component {
     super(props)
 
     this.state = {
-      post: null
+      post: []
     }
   }
 
@@ -32,30 +32,26 @@ export default class PostDetails extends Component {
       <>
         <div className="everything">
           {this.state.post &&
-            <div className="CompletePostIncludeComment123">
+            <div className="CompletePostIncludeComment">
               <button onClick={this.props.clearVisablePost}>X</button>
               <div className="Posts">
-                <div className="Userinfo">
-                  <img src={this.state.post.user.image_url} className="usericon" />
-                  <p className="usernameicon">{this.state.post.user.username}</p>
-                </div>
-                <img src={this.state.post.image_url} className="post_image" />
+                <img src={this.state.post.post_text} className="post_text" />
                 <p className="captions">{this.state.post.captions}</p>
               </div>
             </div>
           }
         </div>
-        <div className="ThePostComments">
+        {/* <div className="ThePostComments">
           {this.state.post && this.state.post.comments.map(comment =>
             <>
               <div className="commentcomment1">
-                <img src={comment.user.image_url} className="commentuser_image" />
+                <img src={comment.user} className="commentuser" />
                 <p className="usernameicon_commenter">{comment.user.username}</p>
                 <p className="commentContent">{comment.content}</p>
               </div>
             </>
           )}
-        </div>
+        </div> */}
       </>
     )
   }

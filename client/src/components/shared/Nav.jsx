@@ -22,7 +22,7 @@ export default function Nav(props) {
       <Link to="/CreatePost">
         <img src={createpost} className="Createicon" />
       </Link>
-      <Link to="/Login" className="Login">
+      <Link to="/Login">
         <img src={login} className="Login" />
       </Link>
       <Link to="/Register">

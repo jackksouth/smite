@@ -31,6 +31,7 @@ export const getOnePost = async (id) => {
 }
 
 export const createPost = async (postData) => {
+  console.log({ post: postData })
   const resp = await api.post('/posts', { post: postData })
   return resp.data;
 }
@@ -56,7 +57,7 @@ export const putComment = async (id, commentData) => {
   return resp.data;
 }
 
-export const deleteComment = async ( id) => {
+export const deleteComment = async (id) => {
   const resp = await api.delete(`/posts/1/comments/${id}`);
   return resp
 }

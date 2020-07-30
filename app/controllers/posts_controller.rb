@@ -1,45 +1,51 @@
 class PostsController < ApplicationController
-  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_post, only: [:show, :update, :destroy]
+
+  # GET /posts
   def index
-    # @user = User.find(params[:user_id])
     @posts = Post.all
-    render json: @posts, include: [:user, {comments:{include: :user}}], status: :ok
+
+    render json: @posts, include: [:comments]
   end
 
+  # GET /posts/1
   def show
-    @posts = Post.find(params[:id])
-    render json: @posts, include: [:user, {comments:{include: :user}}], status: :ok
+    render json: @post, include: [:comments]
   end
-  
+
+  # POST /posts
   def create
     @post = Post.new(post_params)
-    @post.user = @current_user
+
     if @post.save
-    render json: @post, include: :user, status: :ok
-    else 
+      render json: @post, status: :created
+    else
       render json: @post.errors, status: :unprocessable_entity
     end
   end
-  
+
+  # PATCH/PUT /posts/1
   def update
-    @post = Post.find(params[:id])
-  if @post.update(post_params)
-    render json: @post, include: :user, status: :ok
-  else
-    render json: @post.errors, status: :unprocessable_entity
-  end
-end
-  
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    render json: "Post Deleted"
-  end
-  
-  private
-  
-  def post_params
-    params.require(:post).permit(:captions, :image_url, :user_id)
+    if @post.update(post_params)
+      render json: @post
+    else
+      render json: @post.errors, status: :unprocessable_entity
+    end
   end
 
+  # DELETE /posts/1
+  def destroy
+    @post.destroy
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post = Post.find(params[:id])
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def post_params
+      params.require(:post).permit(:post, :user_id)
+    end
 end

@@ -71,7 +71,7 @@ export default class Homepage extends Component {
             <div onClick={() => this.props.setVisablePost(post.id)}>
               <div className="Posts">
                 <div className="Userinfo">
-                  <img src={post.user.image_url} className="usericon" />
+                  <img src={post.user.text} className="usericon" />
                   <p className="usernameicon" >{post.user.username} </p>
                 </div>
                 <img className="post" src={post.text} alt='post_text' />

@@ -1,5 +1,5 @@
 class Setdefault < ActiveRecord::Migration[6.0]
   def change
-    change_column_default(:users, :image_url, "")
+    change_column_default(:users, :text, "")
   end
 end

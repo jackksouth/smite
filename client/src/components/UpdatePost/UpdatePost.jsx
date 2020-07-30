@@ -4,14 +4,14 @@ import { getOnePost, putPost } from '../../services/api-helper'
 export default class UpdatePost extends Component {
   state = {
     captions: '',
-    image_url: ''
+    post_text: ''
   }
 
   async componentDidMount() {
     const { id } = this.props.match.params
     const post = await getOnePost(id)
     console.log(post)
-    this.setState({ captions: post.captions, image_url: post.image_url })
+    this.setState({ captions: post.captions, post_text: post.post_text })
   }
 
 
@@ -61,13 +61,13 @@ export default class UpdatePost extends Component {
           />
         </label>
         <label>
-          Add Image:
+          Add Text:
           <input
-            name='image_url'
-            className="input-image-link"
-            placeholder='Image Link'
+            name='text_post'
+            className="input-text"
+            placeholder='Text'
             type='text'
-            value={this.state.image_url}
+            value={this.state.post_text}
             onChange={this.handleChange}
           />
         </label>

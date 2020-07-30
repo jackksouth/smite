@@ -15,10 +15,10 @@ import UpdatePost from "./components/UpdatePost/UpdatePost";
 
 class App extends Component {
   state = {
-    currentUser: null,
-    posts: null,
-    createPost: null,
-    visablePost: null,
+    currentUser: [],
+    posts: [],
+    createPost: [],
+    visablePost: []
   };
 
   componentDidMount() {
@@ -40,7 +40,7 @@ class App extends Component {
 
   handleLogout = () => {
     this.setState({
-      currentUser: null,
+      currentUser: [],
     });
     localStorage.removeItem("authToken");
     removeToken();
@@ -74,7 +74,7 @@ class App extends Component {
 
   clearVisablePost = () => {
     this.setState({
-      visablePost: null,
+      visablePost: [],
     });
   };
 
@@ -98,10 +98,10 @@ class App extends Component {
     return (
       <div className="body">
         <div>
-          <Link to="/">
-            <Header />
-            <Nav />
-          </Link>
+
+          <Header />
+          <Nav />
+
 
           {this.state.posts && (
             <Route
