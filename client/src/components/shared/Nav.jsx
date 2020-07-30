@@ -19,6 +19,7 @@ export default function Nav(props) {
           <img src={profile} className="Usericon" />
         </Link>
       )}
+      {props.currentUser && `Hello ${props.currentUser.username}`}
       <Link to="/CreatePost">
         <img src={createpost} className="Createicon" />
       </Link>

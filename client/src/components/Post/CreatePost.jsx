@@ -3,7 +3,7 @@ import './CreatePost.scss'
 
 export default class CreatePost extends Component {
   state = {
-    post: []
+    post_text: ''
   }
 
   handleChange = (e) => {
@@ -23,7 +23,7 @@ export default class CreatePost extends Component {
         <h3>Create a Smite Post</h3>
         <label>
           <input
-            name='post'
+            name='post_text'
             className="input-post-text"
             placeholder='Smite Post'
             type='text'

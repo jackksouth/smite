@@ -3,15 +3,15 @@ import { getOnePost, putPost } from '../../services/api-helper'
 
 export default class UpdatePost extends Component {
   state = {
-    captions: '',
     post_text: ''
   }
 
   async componentDidMount() {
     const { id } = this.props.match.params
+    console.log(id)
     const post = await getOnePost(id)
     console.log(post)
-    this.setState({ captions: post.captions, post_text: post.post_text })
+    this.setState({ post_text: post.post_text })
   }
 
 
@@ -29,10 +29,18 @@ export default class UpdatePost extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value
-    })
+    this.setState((prevState) => ({
+      ...prevState.posts, [name]: value
+    }));
   }
+
+  // handleCreatePost = async (postData) => {
+  //   const newPost = await createPost({ ...postData, user_id: this.state.currentUser.id })
+  //   this.setState((prevState) => ({
+  //     posts: [...prevState.posts, newPost],
+  //   }));
+  //   this.props.history.push('/');
+  // };
 
   handlePostUpdate = async (id, postData) => {
     const newPost = await putPost(id, postData);
@@ -47,10 +55,10 @@ export default class UpdatePost extends Component {
       <form onSubmit={(e) => {
         e.preventDefault();
         this.handlePostUpdate(id, this.state);
-        history.push(`/`);
+        history.push(`/Homepage`);
       }}>
         <h3>Update Post</h3>
-        <label>
+        {/* <label>
           Caption:
           <input
             name="captions"
@@ -59,11 +67,11 @@ export default class UpdatePost extends Component {
             value={this.state.captions}
             onChange={this.handleChange}
           />
-        </label>
+        </label> */}
         <label>
-          Add Text:
+          Text:
           <input
-            name='text_post'
+            name='post_text'
             className="input-text"
             placeholder='Text'
             type='text'

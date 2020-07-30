@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_07_20_015902) do
     t.string "last_name"
     t.date "DOB"
     t.string "gender"
+    t.string "username"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false

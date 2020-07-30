@@ -27,6 +27,7 @@ class App extends Component {
   }
 
   handleLogin = async (userData) => {
+    console.log(userData)
     const currentUser = await loginUser(userData);
     this.setState({ currentUser });
     console.log(currentUser);
@@ -54,16 +55,15 @@ class App extends Component {
 
   getPosts = async () => {
     const posts = await getAllPosts();
-    console.log(posts);
     this.setState({ posts });
   };
 
   handleCreatePost = async (postData) => {
-    const newPost = await createPost(postData);
+    const newPost = await createPost({ ...postData, user_id: this.state.currentUser.id })
     this.setState((prevState) => ({
       posts: [...prevState.posts, newPost],
     }));
-    this.props.history.push('/');
+    this.props.history.push('/Homepage');
   };
 
   setVisablePost = (id) => {
@@ -100,13 +100,13 @@ class App extends Component {
         <div>
 
           <Header />
-          <Nav />
+          <Nav currentUser={this.state.currentUser} />
 
 
           {this.state.posts && (
             <Route
               exact
-              path="/Nav"
+              path="/Homepage"
               render={(props) => (
                 <Homepage
                   posts={this.state.posts}
@@ -172,7 +172,7 @@ class App extends Component {
           />
           <Route
             exact
-            path="/post/new/:id/update"
+            path="/post/:id/update"
             render={(props) => (
               <UpdatePost
                 {...props}
