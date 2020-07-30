@@ -30,7 +30,7 @@ export default class UpdatePost extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => ({
-      ...prevState.posts, [name]: value
+      ...prevState.posts,[name]: value
     }));
   }
 

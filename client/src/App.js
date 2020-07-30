@@ -100,7 +100,7 @@ class App extends Component {
         <div>
 
           <Header />
-          <Nav currentUser={this.state.currentUser} />
+          <Nav currentUser={this.state.currentUser}/>
 
 
           {this.state.posts && (

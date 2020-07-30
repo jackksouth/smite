@@ -12,7 +12,7 @@ export default class Homepage extends Component {
   //   }
   // }
 
-
+  
 
 
   // async componentDidMount() {
@@ -67,24 +67,24 @@ export default class Homepage extends Component {
     this.props.history.push(`/post/${id}/update`)
   }
 
-
+  
   render() {
-    console.log(this.props.posts)
+    console.log( this.props.posts )
     return (
       <div className='body'>
         {this.props.posts && this.props.posts.map(post => (
           <div className="CompletePostIncludeComment">
             {/* <div onClick={() => this.props.setVisablePost(post.id)}> */}
-            <div className="Posts">
-              {/* <div className="Userinfo">
+              <div className="Posts">
+                {/* <div className="Userinfo">
                   <img src={post.user.text} className="usericon" />
                   <p className="username" >{post.user.username} </p>
                 </div> */}
 
               <h3>{post.post_text}</h3>
-            </div>
+              </div>
 
-            {/* <div>
+              {/* <div>
                 {post && post.comments.map(comment =>
                   <CommentEdit comment={comment} handleCommentDelete={this.handleCommentDelete} handleCommentUpdate={this.handleCommentUpdate} currentUser={this.props.currentUser} {...this.props} />
                 )}
