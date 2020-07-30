@@ -21,43 +21,43 @@ export const deleteUser = async (id) => {
 }
 
 export const getAllPosts = async () => {
-  const resp = await api.get('/posts');
+  const resp = await api.get('/posts/new');
   return resp.data;
 };
 
 export const getOnePost = async (id) => {
-  const resp = await api.get(`/posts/${id}`);
+  const resp = await api.get(`/posts/new${id}`);
   return resp.data;
 }
 
 export const createPost = async (postData) => {
   console.log({ post: postData })
-  const resp = await api.post('/posts', { post: postData })
+  const resp = await api.post('/posts/new', { post: postData })
   return resp.data;
 }
 
 export const putPost = async (id, postData) => {
-  const resp = await api.put(`/posts/${id}`, { post: postData })
+  const resp = await api.put(`/posts/new${id}`, { post: postData })
   return resp.data;
 }
 
 export const deletePost = async (id) => {
-  const resp = await api.delete(`/posts/${id}`);
+  const resp = await api.delete(`/posts/new${id}`);
   return resp
 }
 
 
 export const createComment = async (posts_id, commentData) => {
-  const resp = await api.post(`/posts/${posts_id}/comments`, { comment: commentData })
+  const resp = await api.post(`/posts/new${posts_id}/comments`, { comment: commentData })
   return resp.data;
 }
 
 export const putComment = async (id, commentData) => {
-  const resp = await api.put(`/posts/1/comments/${id}`, { comment: commentData })
+  const resp = await api.put(`/posts/new/1/comments/${id}`, { comment: commentData })
   return resp.data;
 }
 
 export const deleteComment = async (id) => {
-  const resp = await api.delete(`/posts/1/comments/${id}`);
+  const resp = await api.delete(`/posts/new/1/comments/${id}`);
   return resp
 }

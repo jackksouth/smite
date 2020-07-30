@@ -161,7 +161,7 @@ class App extends Component {
           />
           <Route
             exact
-            path="/createpost"
+            path="/createpost/"
             render={(props) => (
               <CreatePost
                 handleCreatePost={this.handleCreatePost}
@@ -172,7 +172,7 @@ class App extends Component {
           />
           <Route
             exact
-            path="/post/:id/update"
+            path="/post/new/:id/update"
             render={(props) => (
               <UpdatePost
                 {...props}
