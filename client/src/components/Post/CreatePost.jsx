@@ -23,7 +23,7 @@ export default class CreatePost extends Component {
         <h3>Create a Smite Post</h3>
         <label>
           <input
-            name='post-text'
+            name='post'
             className="input-post-text"
             placeholder='Smite Post'
             type='text'
